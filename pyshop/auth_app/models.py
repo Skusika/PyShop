@@ -57,6 +57,8 @@ class User(AbstractUser):
 
     is_superuser = models.BooleanField(verbose_name="суперпользователь", default=False)
 
+    is_staff = models.BooleanField(verbose_name="технический персонал", default=False)
+
     notification = models.BooleanField(verbose_name="уведомление", default=False)
 
     date_joined = models.DateTimeField(
